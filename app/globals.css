@@ -8,6 +8,66 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-carbon-black-50: #f4f4f1;
+  --color-carbon-black-100: #e9e9e2;
+  --color-carbon-black-200: #d2d2c6;
+  --color-carbon-black-300: #bcbca9;
+  --color-carbon-black-400: #a5a58d;
+  --color-carbon-black-500: #8f8f70;
+  --color-carbon-black-600: #72725a;
+  --color-carbon-black-700: #565643;
+  --color-carbon-black-800: #39392d;
+  --color-carbon-black-900: #1d1d16;
+  --color-carbon-black-950: #141410;
+
+  --color-dark-khaki-50: #f7f4ee;
+  --color-dark-khaki-100: #efeadc;
+  --color-dark-khaki-200: #dfd4b9;
+  --color-dark-khaki-300: #cfbf96;
+  --color-dark-khaki-400: #bfa973;
+  --color-dark-khaki-500: #af9450;
+  --color-dark-khaki-600: #8c7640;
+  --color-dark-khaki-700: #695930;
+  --color-dark-khaki-800: #463b20;
+  --color-dark-khaki-900: #231e10;
+  --color-dark-khaki-950: #18150b;
+
+  --color-onyx-50: #f4f4f1;
+  --color-onyx-100: #e8e8e3;
+  --color-onyx-200: #d2d2c6;
+  --color-onyx-300: #bbbbaa;
+  --color-onyx-400: #a4a48e;
+  --color-onyx-500: #8e8e71;
+  --color-onyx-600: #71715b;
+  --color-onyx-700: #555544;
+  --color-onyx-800: #39392d;
+  --color-onyx-900: #1c1c17;
+  --color-onyx-950: #141410;
+
+  --color-dark-goldenrod-50: #f8f4ed;
+  --color-dark-goldenrod-100: #f0eadb;
+  --color-dark-goldenrod-200: #e2d4b6;
+  --color-dark-goldenrod-300: #d3bf92;
+  --color-dark-goldenrod-400: #c5a96d;
+  --color-dark-goldenrod-500: #b69449;
+  --color-dark-goldenrod-600: #92763a;
+  --color-dark-goldenrod-700: #6d592c;
+  --color-dark-goldenrod-800: #493b1d;
+  --color-dark-goldenrod-900: #241e0f;
+  --color-dark-goldenrod-950: #1a150a;
+
+  --color-onyx-50: #f4f4f1;
+  --color-onyx-100: #e8e8e3;
+  --color-onyx-200: #d1d1c7;
+  --color-onyx-300: #babaab;
+  --color-onyx-400: #a3a38f;
+  --color-onyx-500: #8c8c73;
+  --color-onyx-600: #70705c;
+  --color-onyx-700: #545445;
+  --color-onyx-800: #38382e;
+  --color-onyx-900: #1c1c17;
+  --color-onyx-950: #141410;
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
