@@ -10,11 +10,15 @@ export const companyInfo: SellerInfo = {
   name: "Elite Affairs Kft.",
   address: "Bisinger József sétány 32.",
   city: "9022 Győr",
-  taxNumber: "12345678-2-41",
-  bankAccount: "11013002-01000000-00000000",
+  taxNumber: "85869694-2-08",
+  bankAccount: "20526615-67760512-00000000",
   email: "elite.affairs.kft@gmail.com",
   phone: "+36 30 910 1300",
-  logoUrl: undefined, // Add your logo URL here (e.g., "/logo.png" or "https://...")
+  logoUrl: undefined, // Add your logo URL here (e.g., "/logo.png" or "https://.
+  // 
+  // 
+  // 
+  // ..")
 };
 
 // Default VAT rate in Hungary (27%)

@@ -238,9 +238,9 @@ export default function OrderForm() {
             {orderItems.map((item, index) => (
               <div
                 key={item.id}
-                className="flex gap-4 items-start bg-white p-4 rounded-lg border-2 border-onyx-200"
+                className="flex flex-col sm:flex-row gap-4 items-start bg-white p-4 rounded-lg border-2 border-onyx-200"
               >
-                <div className="flex-1">
+                <div className="flex-1 w-full">
                   <label className="block text-sm font-medium text-carbon-black-800 mb-1">
                     Product
                   </label>
@@ -249,7 +249,7 @@ export default function OrderForm() {
                     onChange={(e) =>
                       updateOrderItem(item.id, "productId", e.target.value)
                     }
-                    className="w-full px-4 py-2 border-2 border-onyx-300 rounded-lg focus:ring-2 focus:ring-dark-khaki-500 focus:border-transparent bg-white text-carbon-black-900"
+                    className="w-full px-4 py-3 border-2 border-onyx-300 rounded-lg focus:ring-2 focus:ring-dark-khaki-500 focus:border-transparent bg-white text-carbon-black-900 text-base min-h-[48px]"
                   >
                     <option value="">Select a product...</option>
                     {products.map((product) => (
@@ -261,7 +261,7 @@ export default function OrderForm() {
                   </select>
                 </div>
 
-                <div className="w-32">
+                <div className="w-full sm:w-32">
                   <label className="block text-sm font-medium text-carbon-black-800 mb-1">
                     Quantity
                   </label>
@@ -276,7 +276,7 @@ export default function OrderForm() {
                         parseInt(e.target.value) || 1,
                       )
                     }
-                    className="w-full px-4 py-2 border-2 border-onyx-300 rounded-lg focus:ring-2 focus:ring-dark-khaki-500 focus:border-transparent bg-white text-carbon-black-900"
+                    className="w-full px-4 py-3 border-2 border-onyx-300 rounded-lg focus:ring-2 focus:ring-dark-khaki-500 focus:border-transparent bg-white text-carbon-black-900 text-base min-h-[48px]"
                   />
                 </div>
 

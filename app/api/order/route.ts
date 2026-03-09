@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import type { OrderRequest, OrderResponse, Customer } from "../../types/order";
 import { createInvoiceFromOrder } from "../../utils/invoice-generator";
 import { generateInvoicePDFBase64 } from "../../utils/pdf-generator";
-import { sendOrderConfirmationEmail } from "../../utils/email-sender";
+import { sendOrderConfirmationEmail, sendSellerNotificationEmail } from "../../utils/email-sender";
 
 /**
  * POST /api/order
@@ -108,6 +108,37 @@ export async function POST(request: NextRequest) {
     } catch (emailErr) {
       emailError = emailErr instanceof Error ? emailErr.message : "Email exception";
       console.error("Email exception:", emailError);
+    }
+
+    // Send notification email to seller
+    try {
+      const customerAny = body.customer as unknown as {
+        type: string;
+        address?: string;
+        taxNumber?: string;
+        phone?: string;
+      };
+      
+      const customerAddress = customerAny.type === "company"
+        ? `${customerAny.address || ""}, ${customerAny.taxNumber || ""}`
+        : customerAny.address || "N/A";
+
+      const sellerResult = await sendSellerNotificationEmail(
+        body.customer.name,
+        body.customer.email,
+        customerAny.phone || "N/A",
+        customerAddress,
+        invoice,
+        pdfBase64,
+      );
+
+      if (sellerResult.success) {
+        console.log("Seller notification email sent:", sellerResult.messageId);
+      } else {
+        console.error("Seller notification email failed:", sellerResult.error);
+      }
+    } catch (sellerEmailErr) {
+      console.error("Seller email exception:", sellerEmailErr);
     }
 
     const response: OrderResponse = {
