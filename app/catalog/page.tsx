@@ -68,28 +68,8 @@ export default function CatalogPage() {
         />
       </section>
 
-      <section className={styles.emailSection}>
-        <p className={styles.emailLabel}>Send catalog info to your email:</p>
-        <div className={styles.emailForm}>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="your@email.com"
-            className={styles.emailInput}
-          />
-          <button
-            onClick={handleSendEmail}
-            disabled={isSending}
-            className={styles.sendButton}
-          >
-            {isSending ? 'Sending...' : 'Send'}
-          </button>
-        </div>
-      </section>
-
       <footer className={styles.footer}>
-        <p>© 2024 Elite Affairs - All rights reserved</p>
+        <p>© 2026 Elite Affairs - All rights reserved</p>
       </footer>
     </main>
   );
